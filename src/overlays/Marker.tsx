@@ -17,6 +17,7 @@ interface MarkerProps extends PigeonProps {
 
   // callbacks
   onClick?: ({ event: HTMLMouseEvent, anchor: Point, payload: any }) => void
+  onDoubleClick?: ({ event: HTMLMouseEvent, anchor: Point, payload: any }) => void
   onContextMenu?: ({ event: HTMLMouseEvent, anchor: Point, payload: any }) => void
   onMouseOver?: ({ event: HTMLMouseEvent, anchor: Point, payload: any }) => void
   onMouseOut?: ({ event: HTMLMouseEvent, anchor: Point, payload: any }) => void
@@ -58,6 +59,7 @@ export function Marker(props: MarkerProps): JSX.Element {
       }}
       className={props.className ? `${props.className} pigeon-click-block` : 'pigeon-click-block'}
       onClick={props.onClick ? (event) => props.onClick(eventParameters(event)) : null}
+      onDoubleClick={props.onDoubleClick ? (event) => props.onDoubleClick(eventParameters(event)) : null}
       onContextMenu={props.onContextMenu ? (event) => props.onContextMenu(eventParameters(event)) : null}
       onMouseOver={(event) => {
         props.onMouseOver && props.onMouseOver(eventParameters(event))

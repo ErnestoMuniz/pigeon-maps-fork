@@ -1,20 +1,20 @@
 {
-  "name": "pigeon-maps",
+  "name": "@ernestomuniz/pigeon-maps",
   "version": "0.21.3",
   "description": "ReactJS maps without external dependencies",
-  "author": "Marius Andra",
+  "author": "Ernesto Muniz",
   "license": "MIT",
   "types": "lib/index.d.ts",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mariusandra/pigeon-maps.git"
+    "url": "git+https://github.com/ErnestoMuniz/pigeon-maps-fork.git"
   },
   "bugs": {
-    "url": "https://github.com/mariusandra/pigeon-maps/issues"
+    "url": "https://github.com/ErnestoMuniz/pigeon-maps-fork/issues"
   },
-  "homepage": "https://github.com/mariusandra/pigeon-maps#readme",
+  "homepage": "https://github.com/ErnestoMuniz/pigeon-maps-fork#readme",
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --hot --host 0.0.0.0 --port 4040",
     "build": "rimraf lib && rollup -c && rimraf lib/demo && mv lib/src/* lib/ && rimraf lib/src",
@@ -30,7 +30,6 @@
     "README.md",
     "providers"
   ],
-  "dependencies": {},
   "peerDependencies": {
     "react": "*"
   },
